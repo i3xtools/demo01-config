@@ -1,0 +1,17 @@
+port: 9000
+upstreams:
+  - name: "erp"
+    url: "http://i3xdb:8080"
+  - name: "okuma"
+    url: "http://i3xmt-okuma:8080"
+  - name: "mazak"
+    url: "http://i3xmt-mazak:8080"
+
+reparent:
+  # Nest Okuma lathe device under the ERP equipment record
+  - elementId: "OKUMA.123456"
+    parentId: "Equipment:CL-01"
+
+  # Nest Mazak 5-axis device under the ERP equipment record
+  - elementId: "Mazak"
+    parentId: "Equipment:5AX-01"

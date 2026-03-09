@@ -1,0 +1,1606 @@
+mapping:
+  namespace:
+    uri: urn:mtconnect.org:MTConnectDevices:2.0
+    displayName: Mazak_Corporation Mazak
+  components:
+    lubrication:
+      objectTypeName: Lubrication
+      excluded: false
+      includedDataItems:
+      - lubrication_cond
+      - lubelevel
+      propertyNames:
+        lubrication_cond: lubrication_cond
+        lubelevel: lubelevel
+    cont:
+      objectTypeName: Controller
+      excluded: false
+      includedDataItems:
+      - comms_cond
+      - logic_cond
+      - system_cond
+      - estop
+      - auto_time
+      - total_time
+      - cut_time
+      - total_auto_cut_time
+      - pallet_num
+      propertyNames:
+        comms_cond: comms_cond
+        total_time: total_time
+        total_auto_cut_time: total_auto_cut_time
+        cut_time: cut_time
+        auto_time: auto_time
+        system_cond: system_cond
+        logic_cond: logic_cond
+        estop: estop
+        pallet_num: pallet_num
+    trundle:
+      objectTypeName: Link
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    enclosurem:
+      objectTypeName: Enclosure
+      excluded: false
+      includedDataItems:
+      - insidetempm
+      propertyNames:
+        insidetempm: insidetempm
+    x:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - Xabs
+      - Xpos
+      - Xtravel
+      - Xload
+      - Xfrt
+      - servotemp1
+      - xaxisstate
+      propertyNames:
+        xaxisstate: xaxisstate
+        Xtravel: Xtravel
+        Xpos: Xpos
+        Xabs: Xabs
+        Xload: Xload
+        Xfrt: Xfrt
+        servotemp1: servotemp1
+    table:
+      objectTypeName: Link
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    mstruct:
+      objectTypeName: Structures
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    room:
+      objectTypeName: Environmental
+      excluded: false
+      includedDataItems:
+      - rmtmp1
+      propertyNames:
+        rmtmp1: rmtmp1
+    parts:
+      objectTypeName: Parts
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    hydraulic:
+      objectTypeName: Hydraulic
+      excluded: false
+      includedDataItems:
+      - hydra_cond
+      propertyNames:
+        hydra_cond: hydra_cond
+    pneumatic:
+      objectTypeName: Pneumatic
+      excluded: false
+      includedDataItems:
+      - pneu_cond
+      propertyNames:
+        pneu_cond: pneu_cond
+    systems:
+      objectTypeName: Systems
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    xaxism:
+      objectTypeName: Link
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    c2:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - Cload
+      - Ctravel
+      - Cfrt
+      - Cabs
+      - Cpos
+      - crfunc
+      - S2load_cond
+      - S2temp_cond
+      - caxisstate
+      propertyNames:
+        S2load_cond: S2load_cond
+        caxisstate: caxisstate
+        Cpos: Cpos
+        crfunc: crfunc
+        S2temp_cond: S2temp_cond
+        Cload: Cload
+        Cfrt: Cfrt
+        Cabs: Cabs
+        Ctravel: Ctravel
+    a:
+      objectTypeName: Axes
+      excluded: false
+      includedDataItems:
+      - servo_cond
+      - spindle_cond
+      propertyNames:
+        spindle_cond: spindle_cond
+        servo_cond: servo_cond
+    path1:
+      objectTypeName: Path
+      excluded: false
+      includedDataItems:
+      - orientation
+      - pathpos
+      - peditmode
+      - peditname
+      - hd1chuckstate
+      - Frapidovr
+      - Fovr
+      - Sovr
+      - program
+      - activeprog
+      - unitNum
+      - sequenceNum
+      - PartCountAct
+      - Fact
+      - Tool_number
+      - Tool_group
+      - Tool_suffix
+      - execution
+      - waitstate
+      - mode
+      - program_cmt
+      - activeprogram_cmt
+      - motion_cond
+      - path_system
+      - cmomachineaxislock
+      - cmosingleblock
+      - cmodryrun
+      - linelabel
+      - linenumber
+      - cvars
+      - cspeed
+      - workoffsettrans
+      - workoffsetrot
+      - woffset
+      propertyNames:
+        Fovr: Fovr
+        orientation: orientation
+        path_system: path_system
+        hd1chuckstate: hd1chuckstate
+        linenumber: linenumber
+        cvars: cvars
+        peditname: peditname
+        cmodryrun: cmodryrun
+        program_cmt: program_cmt
+        cmosingleblock: cmosingleblock
+        activeprogram_cmt: activeprogram_cmt
+        sequenceNum: sequenceNum
+        peditmode: peditmode
+        program: program
+        cmomachineaxislock: cmomachineaxislock
+        workoffsetrot: workoffsetrot
+        unitNum: unitNum
+        Frapidovr: Frapidovr
+        Fact: Fact
+        execution: execution
+        Sovr: Sovr
+        motion_cond: motion_cond
+        Tool_group: Tool_group
+        linelabel: linelabel
+        activeprog: activeprog
+        mode: mode
+        workoffsettrans: workoffsettrans
+        waitstate: waitstate
+        Tool_number: Tool_number
+        Tool_suffix: Tool_suffix
+        cspeed: cspeed
+        pathpos: pathpos
+        PartCountAct: PartCountAct
+        woffset: woffset
+    materials:
+      objectTypeName: Materials
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    z:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - tempspec
+      - temp
+      - Zabs
+      - Zpos
+      - Ztravel
+      - Zload
+      - Zfrt
+      - servotemp3
+      - zaxisstate
+      propertyNames:
+        temp: temp
+        servotemp3: servotemp3
+        Zpos: Zpos
+        Zload: Zload
+        Zfrt: Zfrt
+        tempspec: templimit
+        Zabs: Zabs
+        zaxisstate: zaxisstate
+        Ztravel: Ztravel
+    y:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - Yabs
+      - Ypos
+      - Ytravel
+      - Yload
+      - Yfrt
+      - servotemp2
+      - yaxisstate
+      propertyNames:
+        Ypos: Ypos
+        Ytravel: Ytravel
+        Yabs: Yabs
+        Yfrt: Yfrt
+        Yload: Yload
+        servotemp2: servotemp2
+        yaxisstate: yaxisstate
+    resourcesm:
+      objectTypeName: Resources
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    Aux:
+      objectTypeName: Auxiliaries
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    partocc:
+      objectTypeName: PartOccurrence
+      excluded: false
+      includedDataItems:
+      - part_uuid
+      - part_geo
+      - fixture_uuid
+      - fixture_geo
+      propertyNames:
+        fixture_geo: fixture_geo
+        part_uuid: part_uuid
+        part_geo: part_geo
+        fixture_uuid: fixture_uuid
+    door1:
+      objectTypeName: Door
+      excluded: false
+      includedDataItems:
+      - doorstate
+      propertyNames:
+        doorstate: doorstate
+    personnelm:
+      objectTypeName: Personnel
+      excluded: false
+      includedDataItems:
+      - operator
+      propertyNames:
+        operator: operator
+    coolant:
+      objectTypeName: Coolant
+      excluded: false
+      includedDataItems:
+      - coolant_cond
+      - cooltemp
+      - CONCENTRATION
+      propertyNames:
+        cooltemp: cooltemp
+        CONCENTRATION: CONCENTRATION
+        coolant_cond: coolant_cond
+    procstock:
+      objectTypeName: Stock
+      excluded: false
+      includedDataItems:
+      - stock
+      propertyNames:
+        stock: stock
+    c:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - Sload
+      - Srpm
+      - Stemp
+      - c2rfunc
+      - Sload_cond
+      - Stemp_cond
+      propertyNames:
+        c2rfunc: c2rfunc
+        Stemp_cond: Stemp_cond
+        Stemp: Stemp
+        Sload: Sload
+        Srpm: Srpm
+        Sload_cond: Sload_cond
+    yaxism:
+      objectTypeName: Link
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    zaxis:
+      objectTypeName: Link
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    br:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - Bload
+      - Bfrt
+      - Btravel
+      - Babs
+      - Bpos
+      - c3rfunc
+      - baxisstate
+      propertyNames:
+        Bfrt: Bfrt
+        Babs: Babs
+        Bpos: Bpos
+        c3rfunc: c3rfunc
+        Bload: Bload
+        baxisstate: baxisstate
+        Btravel: Btravel
+    elec:
+      objectTypeName: Electric
+      excluded: false
+      includedDataItems:
+      - electric_cond
+      propertyNames:
+        electric_cond: electric_cond
+  relationships:
+  - sourceComponentId: y
+    targetComponentId: x
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: z
+    targetComponentId: y
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: c
+    targetComponentId: z
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: c2
+    targetComponentId: br
+    typeName: MountedOn
+    inverseTypeName: Supports
+deviceModel:
+  deviceId: d1
+  deviceName: Mazak
+  manufacturer: Mazak_Corporation
+  model: ''
+  serialNumber: '317641'
+  components:
+  - id: mstruct
+    name: Structures
+    componentType: Structures
+    parentId: d1
+    nativeName: null
+  - id: xaxism
+    name: X_AXIS
+    componentType: Link
+    parentId: mstruct
+    nativeName: null
+  - id: yaxism
+    name: Y_AXIS
+    componentType: Link
+    parentId: mstruct
+    nativeName: null
+  - id: zaxis
+    name: Z_AXIS
+    componentType: Link
+    parentId: mstruct
+    nativeName: null
+  - id: table
+    name: TABLE
+    componentType: Link
+    parentId: mstruct
+    nativeName: null
+  - id: trundle
+    name: TRUNDLE
+    componentType: Link
+    parentId: mstruct
+    nativeName: null
+  - id: a
+    name: base
+    componentType: Axes
+    parentId: d1
+    nativeName: null
+  - id: x
+    name: X
+    componentType: Linear
+    parentId: a
+    nativeName: X
+  - id: y
+    name: Y
+    componentType: Linear
+    parentId: a
+    nativeName: Y
+  - id: z
+    name: Z
+    componentType: Linear
+    parentId: a
+    nativeName: Z
+  - id: c
+    name: C1
+    componentType: Rotary
+    parentId: a
+    nativeName: S
+  - id: br
+    name: B
+    componentType: Rotary
+    parentId: a
+    nativeName: B
+  - id: c2
+    name: C2
+    componentType: Rotary
+    parentId: a
+    nativeName: C
+  - id: cont
+    name: controller
+    componentType: Controller
+    parentId: d1
+    nativeName: null
+  - id: path1
+    name: path
+    componentType: Path
+    parentId: cont
+    nativeName: null
+  - id: door1
+    name: door
+    componentType: Door
+    parentId: d1
+    nativeName: null
+  - id: parts
+    name: Parts
+    componentType: Parts
+    parentId: d1
+    nativeName: null
+  - id: partocc
+    name: PartOccurrence
+    componentType: PartOccurrence
+    parentId: parts
+    nativeName: null
+  - id: systems
+    name: systems
+    componentType: Systems
+    parentId: d1
+    nativeName: null
+  - id: elec
+    name: electric
+    componentType: Electric
+    parentId: systems
+    nativeName: null
+  - id: hydraulic
+    name: hydraulic
+    componentType: Hydraulic
+    parentId: systems
+    nativeName: null
+  - id: coolant
+    name: coolant
+    componentType: Coolant
+    parentId: systems
+    nativeName: null
+  - id: pneumatic
+    name: pneumatic
+    componentType: Pneumatic
+    parentId: systems
+    nativeName: null
+  - id: lubrication
+    name: lubrication
+    componentType: Lubrication
+    parentId: systems
+    nativeName: null
+  - id: Aux
+    name: auxiliaries
+    componentType: Auxiliaries
+    parentId: d1
+    nativeName: null
+  - id: room
+    name: environmental
+    componentType: Environmental
+    parentId: Aux
+    nativeName: null
+  - id: resourcesm
+    name: resources
+    componentType: Resources
+    parentId: d1
+    nativeName: null
+  - id: personnelm
+    name: personnel
+    componentType: Personnel
+    parentId: resourcesm
+    nativeName: null
+  - id: materials
+    name: materials
+    componentType: Materials
+    parentId: resourcesm
+    nativeName: null
+  - id: procstock
+    name: stock
+    componentType: Stock
+    parentId: materials
+    nativeName: null
+  - id: enclosurem
+    name: enclosure
+    componentType: Enclosure
+    parentId: d1
+    nativeName: null
+  dataItems:
+  - id: avail
+    name: avail
+    category: EVENT
+    type: AVAILABILITY
+    subType: null
+    units: null
+    componentId: d1
+  - id: functionalmode
+    name: functionalmode
+    category: EVENT
+    type: FUNCTIONAL_MODE
+    subType: null
+    units: null
+    componentId: d1
+  - id: emloaded
+    name: emloaded
+    category: EVENT
+    type: EQUIPMENT_MODE
+    subType: LOADED
+    units: null
+    componentId: d1
+  - id: emworking
+    name: emworking
+    category: EVENT
+    type: EQUIPMENT_MODE
+    subType: WORKING
+    units: null
+    componentId: d1
+  - id: emoperating
+    name: emoperating
+    category: EVENT
+    type: EQUIPMENT_MODE
+    subType: OPERATING
+    units: null
+    componentId: d1
+  - id: empowered
+    name: empowered
+    category: EVENT
+    type: EQUIPMENT_MODE
+    subType: POWERED
+    units: null
+    componentId: d1
+  - id: emdelay
+    name: emdelay
+    category: EVENT
+    type: EQUIPMENT_MODE
+    subType: DELAY
+    units: null
+    componentId: d1
+  - id: operatingsystem
+    name: operatingsystem
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: null
+    units: null
+    componentId: d1
+  - id: osmfg
+    name: osmfg
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: MANUFACTURER
+    units: null
+    componentId: d1
+  - id: osversion
+    name: osversion
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: VERSION
+    units: null
+    componentId: d1
+  - id: gui
+    name: gui
+    category: EVENT
+    type: APPLICATION
+    subType: null
+    units: null
+    componentId: d1
+  - id: guimfg
+    name: guimfg
+    category: EVENT
+    type: APPLICATION
+    subType: MANUFACTURER
+    units: null
+    componentId: d1
+  - id: guiversion
+    name: guiversion
+    category: EVENT
+    type: APPLICATION
+    subType: VERSION
+    units: null
+    componentId: d1
+  - id: d1_asset_chg
+    name: d1_asset_chg
+    category: EVENT
+    type: ASSET_CHANGED
+    subType: null
+    units: null
+    componentId: d1
+  - id: d1_asset_rem
+    name: d1_asset_rem
+    category: EVENT
+    type: ASSET_REMOVED
+    subType: null
+    units: null
+    componentId: d1
+  - id: d1_asset_count
+    name: d1_asset_count
+    category: EVENT
+    type: ASSET_COUNT
+    subType: null
+    units: null
+    componentId: d1
+  - id: servo_cond
+    name: servo_cond
+    category: CONDITION
+    type: ACTUATOR
+    subType: null
+    units: null
+    componentId: a
+  - id: spindle_cond
+    name: spindle_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: a
+  - id: Xabs
+    name: Xabs
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: x
+  - id: Xpos
+    name: Xpos
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: x
+  - id: Xtravel
+    name: Xtravel
+    category: CONDITION
+    type: POSITION
+    subType: null
+    units: null
+    componentId: x
+  - id: Xload
+    name: Xload
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: x
+  - id: Xfrt
+    name: Xfrt
+    category: SAMPLE
+    type: AXIS_FEEDRATE
+    subType: null
+    units: MILLIMETER/SECOND
+    componentId: x
+  - id: servotemp1
+    name: servotemp1
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: x
+  - id: xaxisstate
+    name: xaxisstate
+    category: EVENT
+    type: AXIS_STATE
+    subType: null
+    units: null
+    componentId: x
+  - id: Yabs
+    name: Yabs
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: y
+  - id: Ypos
+    name: Ypos
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: y
+  - id: Ytravel
+    name: Ytravel
+    category: CONDITION
+    type: POSITION
+    subType: null
+    units: null
+    componentId: y
+  - id: Yload
+    name: Yload
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: y
+  - id: Yfrt
+    name: Yfrt
+    category: SAMPLE
+    type: AXIS_FEEDRATE
+    subType: null
+    units: MILLIMETER/SECOND
+    componentId: y
+  - id: servotemp2
+    name: servotemp2
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: y
+  - id: yaxisstate
+    name: yaxisstate
+    category: EVENT
+    type: AXIS_STATE
+    subType: null
+    units: null
+    componentId: y
+  - id: tempspec
+    name: templimit
+    category: EVENT
+    type: SPECIFICATION_LIMIT
+    subType: null
+    units: null
+    componentId: z
+  - id: temp
+    name: temp
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: null
+    componentId: z
+  - id: Zabs
+    name: Zabs
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: z
+  - id: Zpos
+    name: Zpos
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: z
+  - id: Ztravel
+    name: Ztravel
+    category: CONDITION
+    type: POSITION
+    subType: null
+    units: null
+    componentId: z
+  - id: Zload
+    name: Zload
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: z
+  - id: Zfrt
+    name: Zfrt
+    category: SAMPLE
+    type: AXIS_FEEDRATE
+    subType: null
+    units: MILLIMETER/SECOND
+    componentId: z
+  - id: servotemp3
+    name: servotemp3
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: z
+  - id: zaxisstate
+    name: zaxisstate
+    category: EVENT
+    type: AXIS_STATE
+    subType: null
+    units: null
+    componentId: z
+  - id: Sload
+    name: Sload
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: c
+  - id: Srpm
+    name: Srpm
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: ACTUAL
+    units: REVOLUTION/MINUTE
+    componentId: c
+  - id: Stemp
+    name: Stemp
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: c
+  - id: c2rfunc
+    name: c2rfunc
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: c
+  - id: Sload_cond
+    name: Sload_cond
+    category: CONDITION
+    type: LOAD
+    subType: null
+    units: null
+    componentId: c
+  - id: Stemp_cond
+    name: Stemp_cond
+    category: CONDITION
+    type: TEMPERATURE
+    subType: null
+    units: null
+    componentId: c
+  - id: Bload
+    name: Bload
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: br
+  - id: Bfrt
+    name: Bfrt
+    category: SAMPLE
+    type: ANGULAR_VELOCITY
+    subType: null
+    units: DEGREE/SECOND
+    componentId: br
+  - id: Btravel
+    name: Btravel
+    category: CONDITION
+    type: ANGLE
+    subType: null
+    units: null
+    componentId: br
+  - id: Babs
+    name: Babs
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: br
+  - id: Bpos
+    name: Bpos
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: br
+  - id: c3rfunc
+    name: c3rfunc
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: br
+  - id: baxisstate
+    name: baxisstate
+    category: EVENT
+    type: AXIS_STATE
+    subType: null
+    units: null
+    componentId: br
+  - id: Cload
+    name: Cload
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: c2
+  - id: Ctravel
+    name: Ctravel
+    category: CONDITION
+    type: ANGLE
+    subType: null
+    units: null
+    componentId: c2
+  - id: Cfrt
+    name: Cfrt
+    category: SAMPLE
+    type: ANGULAR_VELOCITY
+    subType: null
+    units: DEGREE/SECOND
+    componentId: c2
+  - id: Cabs
+    name: Cabs
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: c2
+  - id: Cpos
+    name: Cpos
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: c2
+  - id: crfunc
+    name: crfunc
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: c2
+  - id: S2load_cond
+    name: S2load_cond
+    category: CONDITION
+    type: LOAD
+    subType: null
+    units: null
+    componentId: c2
+  - id: S2temp_cond
+    name: S2temp_cond
+    category: CONDITION
+    type: TEMPERATURE
+    subType: null
+    units: null
+    componentId: c2
+  - id: caxisstate
+    name: caxisstate
+    category: EVENT
+    type: AXIS_STATE
+    subType: null
+    units: null
+    componentId: c2
+  - id: comms_cond
+    name: comms_cond
+    category: CONDITION
+    type: COMMUNICATIONS
+    subType: null
+    units: null
+    componentId: cont
+  - id: logic_cond
+    name: logic_cond
+    category: CONDITION
+    type: LOGIC_PROGRAM
+    subType: null
+    units: null
+    componentId: cont
+  - id: system_cond
+    name: system_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: cont
+  - id: estop
+    name: estop
+    category: EVENT
+    type: EMERGENCY_STOP
+    subType: null
+    units: null
+    componentId: cont
+  - id: auto_time
+    name: auto_time
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:AUTO
+    units: SECOND
+    componentId: cont
+  - id: total_time
+    name: total_time
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:TOTAL
+    units: SECOND
+    componentId: cont
+  - id: cut_time
+    name: cut_time
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:CUT
+    units: SECOND
+    componentId: cont
+  - id: total_auto_cut_time
+    name: total_auto_cut_time
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:TOTALCUTTIME
+    units: SECOND
+    componentId: cont
+  - id: pallet_num
+    name: pallet_num
+    category: EVENT
+    type: PALLET_ID
+    subType: null
+    units: null
+    componentId: cont
+  - id: orientation
+    name: orientation
+    category: SAMPLE
+    type: ORIENTATION
+    subType: null
+    units: DEGREE_3D
+    componentId: path1
+  - id: pathpos
+    name: pathpos
+    category: SAMPLE
+    type: PATH_POSITION
+    subType: null
+    units: MILLIMETER_3D
+    componentId: path1
+  - id: peditmode
+    name: peditmode
+    category: EVENT
+    type: PROGRAM_EDIT
+    subType: null
+    units: null
+    componentId: path1
+  - id: peditname
+    name: peditname
+    category: EVENT
+    type: PROGRAM_EDIT_NAME
+    subType: null
+    units: null
+    componentId: path1
+  - id: hd1chuckstate
+    name: hd1chuckstate
+    category: EVENT
+    type: CHUCK_STATE
+    subType: null
+    units: null
+    componentId: path1
+  - id: Frapidovr
+    name: Frapidovr
+    category: EVENT
+    type: PATH_FEEDRATE_OVERRIDE
+    subType: RAPID
+    units: null
+    componentId: path1
+  - id: Fovr
+    name: Fovr
+    category: EVENT
+    type: PATH_FEEDRATE_OVERRIDE
+    subType: PROGRAMMED
+    units: null
+    componentId: path1
+  - id: Sovr
+    name: Sovr
+    category: EVENT
+    type: ROTARY_VELOCITY_OVERRIDE
+    subType: null
+    units: null
+    componentId: path1
+  - id: program
+    name: program
+    category: EVENT
+    type: PROGRAM
+    subType: MAIN
+    units: null
+    componentId: path1
+  - id: activeprog
+    name: activeprog
+    category: EVENT
+    type: PROGRAM
+    subType: ACTIVE
+    units: null
+    componentId: path1
+  - id: unitNum
+    name: unitNum
+    category: EVENT
+    type: x:UNIT
+    subType: null
+    units: null
+    componentId: path1
+  - id: sequenceNum
+    name: sequenceNum
+    category: EVENT
+    type: x:SEQUENCE_NUMBER
+    subType: null
+    units: null
+    componentId: path1
+  - id: PartCountAct
+    name: PartCountAct
+    category: EVENT
+    type: PART_COUNT
+    subType: null
+    units: null
+    componentId: path1
+  - id: Fact
+    name: Fact
+    category: SAMPLE
+    type: PATH_FEEDRATE
+    subType: ACTUAL
+    units: MILLIMETER/SECOND
+    componentId: path1
+  - id: Tool_number
+    name: Tool_number
+    category: EVENT
+    type: TOOL_NUMBER
+    subType: null
+    units: null
+    componentId: path1
+  - id: Tool_group
+    name: Tool_group
+    category: EVENT
+    type: TOOL_GROUP
+    subType: null
+    units: null
+    componentId: path1
+  - id: Tool_suffix
+    name: Tool_suffix
+    category: EVENT
+    type: x:TOOL_SUFFIX
+    subType: null
+    units: null
+    componentId: path1
+  - id: execution
+    name: execution
+    category: EVENT
+    type: EXECUTION
+    subType: null
+    units: null
+    componentId: path1
+  - id: waitstate
+    name: waitstate
+    category: EVENT
+    type: WAIT_STATE
+    subType: null
+    units: null
+    componentId: path1
+  - id: mode
+    name: mode
+    category: EVENT
+    type: CONTROLLER_MODE
+    subType: null
+    units: null
+    componentId: path1
+  - id: program_cmt
+    name: program_cmt
+    category: EVENT
+    type: PROGRAM_COMMENT
+    subType: MAIN
+    units: null
+    componentId: path1
+  - id: activeprogram_cmt
+    name: activeprogram_cmt
+    category: EVENT
+    type: PROGRAM_COMMENT
+    subType: ACTIVE
+    units: null
+    componentId: path1
+  - id: motion_cond
+    name: motion_cond
+    category: CONDITION
+    type: MOTION_PROGRAM
+    subType: null
+    units: null
+    componentId: path1
+  - id: path_system
+    name: path_system
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: path1
+  - id: cmomachineaxislock
+    name: cmomachineaxislock
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: MACHINE_AXIS_LOCK
+    units: null
+    componentId: path1
+  - id: cmosingleblock
+    name: cmosingleblock
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: SINGLE_BLOCK
+    units: null
+    componentId: path1
+  - id: cmodryrun
+    name: cmodryrun
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: DRY_RUN
+    units: null
+    componentId: path1
+  - id: linelabel
+    name: linelabel
+    category: EVENT
+    type: LINE_LABEL
+    subType: null
+    units: null
+    componentId: path1
+  - id: linenumber
+    name: linenumber
+    category: EVENT
+    type: LINE_NUMBER
+    subType: INCREMENTAL
+    units: null
+    componentId: path1
+  - id: cvars
+    name: cvars
+    category: EVENT
+    type: VARIABLE
+    subType: null
+    units: null
+    componentId: path1
+  - id: cspeed
+    name: cspeed
+    category: SAMPLE
+    type: CUTTING_SPEED
+    subType: ACTUAL
+    units: MILLIMETER/SECOND
+    componentId: path1
+  - id: workoffsettrans
+    name: workoffsettrans
+    category: EVENT
+    type: TRANSLATION
+    subType: null
+    units: MILLIMETER_3D
+    componentId: path1
+  - id: workoffsetrot
+    name: workoffsetrot
+    category: EVENT
+    type: ROTATION
+    subType: null
+    units: DEGREE_3D
+    componentId: path1
+  - id: woffset
+    name: woffset
+    category: EVENT
+    type: WORK_OFFSET
+    subType: null
+    units: null
+    componentId: path1
+  - id: doorstate
+    name: doorstate
+    category: EVENT
+    type: DOOR_STATE
+    subType: null
+    units: null
+    componentId: door1
+  - id: part_uuid
+    name: part_uuid
+    category: EVENT
+    type: PART_UNIQUE_ID
+    subType: null
+    units: null
+    componentId: partocc
+  - id: part_geo
+    name: part_geo
+    category: EVENT
+    type: x:PART_GEOMETRY
+    subType: null
+    units: null
+    componentId: partocc
+  - id: fixture_uuid
+    name: fixture_uuid
+    category: EVENT
+    type: x:FIXTURE_UNIQUE_ID
+    subType: null
+    units: null
+    componentId: partocc
+  - id: fixture_geo
+    name: fixture_geo
+    category: EVENT
+    type: x:FIXTURE_GEOMETRY
+    subType: null
+    units: null
+    componentId: partocc
+  - id: electric_cond
+    name: electric_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: elec
+  - id: hydra_cond
+    name: hydra_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: hydraulic
+  - id: coolant_cond
+    name: coolant_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: coolant
+  - id: cooltemp
+    name: cooltemp
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: coolant
+  - id: CONCENTRATION
+    name: CONCENTRATION
+    category: SAMPLE
+    type: CONCENTRATION
+    subType: null
+    units: PERCENT
+    componentId: coolant
+  - id: pneu_cond
+    name: pneu_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: pneumatic
+  - id: lubrication_cond
+    name: lubrication_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: lubrication
+  - id: lubelevel
+    name: lubelevel
+    category: EVENT
+    type: LEVEL
+    subType: null
+    units: PERCENT
+    componentId: lubrication
+  - id: rmtmp1
+    name: rmtmp1
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: room
+  - id: operator
+    name: operator
+    category: EVENT
+    type: USER
+    subType: null
+    units: null
+    componentId: personnelm
+  - id: stock
+    name: stock
+    category: EVENT
+    type: MATERIAL
+    subType: null
+    units: null
+    componentId: procstock
+  - id: insidetempm
+    name: insidetempm
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: enclosurem
+  relationships:
+  - id: xpar
+    componentId: x
+    refId: enclosurem
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: xchi
+    componentId: x
+    refId: xaxism
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: ypar
+    componentId: y
+    refId: xaxism
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: ychi
+    componentId: y
+    refId: yaxism
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: zpar
+    componentId: z
+    refId: yaxism
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: zchi
+    componentId: z
+    refId: zaxis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: spar
+    componentId: c
+    refId: zaxis
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: brpar
+    componentId: br
+    refId: enclosurem
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: brchi
+    componentId: br
+    refId: trundle
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: c2par
+    componentId: c2
+    refId: trundle
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: c2chi
+    componentId: c2
+    refId: table
+    type: CHILD
+    relKind: ComponentRelationship
+  specifications:
+    br:
+    - id: spec027
+      type: ANGLE
+      subType: null
+      units: DEGREE
+      nominal: null
+      minimum: -30.0
+      maximum: 120.0
+    - id: spec024
+      type: TORQUE
+      subType: null
+      units: NEWTON_METER
+      nominal: null
+      minimum: 0.0
+      maximum: 400.0
+    c:
+    - id: spec019
+      type: VELOCITY
+      subType: null
+      units: REVOLUTION/MINUTE
+      nominal: null
+      minimum: 0.0
+      maximum: 12000.0
+    c2:
+    - id: spec031
+      type: ANGLE
+      subType: null
+      units: DEGREE
+      nominal: null
+      minimum: -360.0
+      maximum: 360.0
+    - id: spec032
+      type: TORQUE
+      subType: null
+      units: NEWTON_METER
+      nominal: null
+      minimum: 0.0
+      maximum: 400.0
+    y:
+    - id: spec007
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 550.0
+      minimum: null
+      maximum: null
+    - id: spec008
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 5200.0
+    - id: spec009
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: spec010
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    z:
+    - id: spec013
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 530.0
+      minimum: null
+      maximum: null
+    - id: spec014
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 9600.0
+    - id: spec015
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: spec016
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: proc
+      type: TEMPERATURE
+      subType: null
+      units: CELSIUS
+      nominal: null
+      minimum: null
+      maximum: null
+    x:
+    - id: spec001
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 650.0
+      minimum: null
+      maximum: null
+    - id: spec002
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 5200.0
+    - id: spec003
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: spec004
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+  references: []
+  sources: []

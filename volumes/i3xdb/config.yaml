@@ -1,0 +1,640 @@
+mapping:
+  namespace:
+    uri: urn:precision_cnc:i3x
+    displayName: PrecisionCnc
+  tables:
+    main.enterprises:
+      objectTypeName: Enterprises
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications: {}
+      includedColumns:
+      - id
+      - name
+      - description
+    main.materials:
+      objectTypeName: Materials
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications: {}
+      includedColumns:
+      - id
+      - name
+      - spec
+      - form
+      - stock_qty
+      - unit
+    main.customers:
+      objectTypeName: Customers
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications: {}
+      includedColumns:
+      - id
+      - name
+      - contact
+      - industry
+    main.quality_inspections:
+      objectTypeName: QualityInspections
+      elementIdColumn: id
+      displayNameColumn: id
+      excluded: false
+      fkClassifications:
+        quality_inspections_fk_1:
+          kind: relationship
+          typeName: hasQualityInspections
+          inverseTypeName: QualityInspectionOf
+        quality_inspections_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - result
+      - dimension_checked
+      - nominal
+      - actual
+      - tolerance
+      - inspected_at
+    main.personnel:
+      objectTypeName: Personnel
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications:
+        personnel_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - name
+      - role
+      - shift
+      - cert_level
+    main.areas:
+      objectTypeName: Areas
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications:
+        areas_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - name
+      - area_type
+    main.sites:
+      objectTypeName: Sites
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications:
+        sites_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - name
+      - address
+    main.operations:
+      objectTypeName: Operations
+      elementIdColumn: id
+      displayNameColumn: description
+      excluded: false
+      fkClassifications:
+        operations_fk_2:
+          kind: relationship
+          typeName: hasOperations
+          inverseTypeName: OperationOf
+        operations_fk_0:
+          kind: parent
+          isComposition: false
+        operations_fk_1:
+          kind: relationship
+          typeName: hasOperations
+          inverseTypeName: OperationOf
+      includedColumns:
+      - id
+      - op_number
+      - description
+      - setup_min
+      - run_min
+      - status
+      - started_at
+      - completed_at
+    main.parts:
+      objectTypeName: Parts
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications:
+        parts_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - name
+      - drawing_rev
+      - weight_kg
+      - cycle_time_min
+    main.work_centers:
+      objectTypeName: WorkCenters
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications:
+        work_centers_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - name
+      - capability
+    main.equipment:
+      objectTypeName: Equipment
+      elementIdColumn: id
+      displayNameColumn: name
+      excluded: false
+      fkClassifications:
+        equipment_fk_0:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - name
+      - make
+      - model
+      - serial_number
+      - install_date
+      - status
+    main.job_orders:
+      objectTypeName: JobOrders
+      elementIdColumn: id
+      displayNameColumn: id
+      excluded: false
+      fkClassifications:
+        job_orders_fk_0:
+          kind: relationship
+          typeName: hasJobOrders
+          inverseTypeName: JobOrderOf
+        job_orders_fk_1:
+          kind: parent
+          isComposition: false
+      includedColumns:
+      - id
+      - quantity
+      - priority
+      - status
+      - due_date
+      - created_date
+  virtualForeignKeys: []
+schema:
+  provider: sqlite
+  tables:
+  - schemaName: main
+    tableName: areas
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: site_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: area_type
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: customers
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: contact
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: industry
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: enterprises
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: description
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: equipment
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: work_center_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: make
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: model
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: serial_number
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: install_date
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: status
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: job_orders
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: customer_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: part_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: quantity
+      dataType: INTEGER
+      isNullable: false
+      isPrimaryKey: false
+    - name: priority
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: status
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: due_date
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: created_date
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: materials
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: spec
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: form
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: stock_qty
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: unit
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: operations
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: job_order_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: op_number
+      dataType: INTEGER
+      isNullable: false
+      isPrimaryKey: false
+    - name: description
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: equipment_id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: operator_id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: setup_min
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: run_min
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: status
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: started_at
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: completed_at
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: parts
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: material_id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: drawing_rev
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: weight_kg
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: cycle_time_min
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: personnel
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: role
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: area_id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: shift
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: cert_level
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: quality_inspections
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: operation_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: inspector_id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: result
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: dimension_checked
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    - name: nominal
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: actual
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: tolerance
+      dataType: REAL
+      isNullable: true
+      isPrimaryKey: false
+    - name: inspected_at
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: sites
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: enterprise_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: address
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  - schemaName: main
+    tableName: work_centers
+    columns:
+    - name: id
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: true
+    - name: area_id
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: name
+      dataType: TEXT
+      isNullable: false
+      isPrimaryKey: false
+    - name: capability
+      dataType: TEXT
+      isNullable: true
+      isPrimaryKey: false
+    primaryKey:
+    - id
+  foreignKeys:
+  - constraintName: areas_fk_0
+    sourceSchema: main
+    sourceTable: areas
+    sourceColumn: site_id
+    targetSchema: main
+    targetTable: sites
+    targetColumn: id
+  - constraintName: equipment_fk_0
+    sourceSchema: main
+    sourceTable: equipment
+    sourceColumn: work_center_id
+    targetSchema: main
+    targetTable: work_centers
+    targetColumn: id
+  - constraintName: job_orders_fk_0
+    sourceSchema: main
+    sourceTable: job_orders
+    sourceColumn: part_id
+    targetSchema: main
+    targetTable: parts
+    targetColumn: id
+  - constraintName: job_orders_fk_1
+    sourceSchema: main
+    sourceTable: job_orders
+    sourceColumn: customer_id
+    targetSchema: main
+    targetTable: customers
+    targetColumn: id
+  - constraintName: operations_fk_0
+    sourceSchema: main
+    sourceTable: operations
+    sourceColumn: operator_id
+    targetSchema: main
+    targetTable: personnel
+    targetColumn: id
+  - constraintName: operations_fk_1
+    sourceSchema: main
+    sourceTable: operations
+    sourceColumn: equipment_id
+    targetSchema: main
+    targetTable: equipment
+    targetColumn: id
+  - constraintName: operations_fk_2
+    sourceSchema: main
+    sourceTable: operations
+    sourceColumn: job_order_id
+    targetSchema: main
+    targetTable: job_orders
+    targetColumn: id
+  - constraintName: parts_fk_0
+    sourceSchema: main
+    sourceTable: parts
+    sourceColumn: material_id
+    targetSchema: main
+    targetTable: materials
+    targetColumn: id
+  - constraintName: personnel_fk_0
+    sourceSchema: main
+    sourceTable: personnel
+    sourceColumn: area_id
+    targetSchema: main
+    targetTable: areas
+    targetColumn: id
+  - constraintName: quality_inspections_fk_0
+    sourceSchema: main
+    sourceTable: quality_inspections
+    sourceColumn: inspector_id
+    targetSchema: main
+    targetTable: personnel
+    targetColumn: id
+  - constraintName: quality_inspections_fk_1
+    sourceSchema: main
+    sourceTable: quality_inspections
+    sourceColumn: operation_id
+    targetSchema: main
+    targetTable: operations
+    targetColumn: id
+  - constraintName: sites_fk_0
+    sourceSchema: main
+    sourceTable: sites
+    sourceColumn: enterprise_id
+    targetSchema: main
+    targetTable: enterprises
+    targetColumn: id
+  - constraintName: work_centers_fk_0
+    sourceSchema: main
+    sourceTable: work_centers
+    sourceColumn: area_id
+    targetSchema: main
+    targetTable: areas
+    targetColumn: id

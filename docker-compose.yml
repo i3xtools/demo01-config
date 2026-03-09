@@ -1,0 +1,68 @@
+services:
+
+  # ── ERP / MES database ──────────────────────────────────
+  i3xdb:
+    image: i3xtools/i3xdb-server
+    container_name: demo01-i3xdb
+    restart: unless-stopped
+    volumes:
+      - ./volumes/i3xdb/config.yaml:/etc/i3xdb/config.yaml:ro
+      - ./volumes/i3xdb/precision_cnc.db:/etc/i3xdb/db/precision_cnc.db:ro
+    command: >
+      --config /etc/i3xdb/config.yaml
+      --connection sqlite:///etc/i3xdb/db/precision_cnc.db
+      --port 8080
+    networks:
+      - i3x
+
+  # ── Okuma LB3000 lathe (MTConnect over MQTT) ───────────
+  i3xmt-okuma:
+    image: i3xtools/i3xmt-server
+    container_name: demo01-i3xmt-okuma
+    restart: unless-stopped
+    volumes:
+      - ./volumes/i3xmt/okuma-config.yaml:/etc/i3xmt/config.yaml:ro
+    command: >
+      --broker ${MQTT_BROKER:-mqtt://mqtt:1883}
+      --device ${OKUMA_DEVICE_UUID:-OKUMA}
+      --config /etc/i3xmt/config.yaml
+      --port 8080
+    networks:
+      - i3x
+
+  # ── Mazak INTEGREX 5-axis (MTConnect over MQTT) ────────
+  i3xmt-mazak:
+    image: i3xtools/i3xmt-server
+    container_name: demo01-i3xmt-mazak
+    restart: unless-stopped
+    volumes:
+      - ./volumes/i3xmt/mazak-config.yaml:/etc/i3xmt/config.yaml:ro
+    command: >
+      --broker ${MQTT_BROKER:-mqtt://mqtt:1883}
+      --device ${MAZAK_DEVICE_UUID:-MAZAK}
+      --config /etc/i3xmt/config.yaml
+      --port 8080
+    networks:
+      - i3x
+
+  # ── Aggregator (unified endpoint) ──────────────────────
+  i3xag:
+    image: i3xtools/i3xag-server
+    container_name: demo01-i3xag
+    restart: unless-stopped
+    depends_on:
+      - i3xdb
+      - i3xmt-okuma
+      - i3xmt-mazak
+    volumes:
+      - ./volumes/i3xag/config.yaml:/etc/i3xag/config.yaml:ro
+    command: >
+      --config /etc/i3xag/config.yaml
+    ports:
+      - "${I3XAG_PORT:-9000}:9000"
+    networks:
+      - i3x
+
+networks:
+  i3x:
+    driver: bridge

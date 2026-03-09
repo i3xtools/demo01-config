@@ -1,0 +1,1587 @@
+mapping:
+  namespace:
+    uri: urn:mtconnect.org:MTConnectDevices:2.0
+    displayName: OKUMA MULT_U3000
+  components:
+    z4_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    LHydraulicSystem1:
+      objectTypeName: Hydraulic
+      excluded: false
+      includedDataItems:
+      - LHydraulicSystem1_cond
+      propertyNames:
+        LHydraulicSystem1_cond: HydraulicSystem1_cond
+    Lb1:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - LB1actw
+      - LB1load
+      - LB1Mode
+      propertyNames:
+        LB1Mode: B1Mode
+        LB1actw: B1actw
+        LB1load: B1load
+    Lz1:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - LZ1actm
+      - LZ1actw
+      - LZ1load
+      propertyNames:
+        LZ1actw: Z1actw
+        LZ1actm: Z1actm
+        LZ1load: Z1load
+    LPneumaticSystem1:
+      objectTypeName: Pneumatic
+      excluded: false
+      includedDataItems:
+      - LPneumaticSystem1_cond
+      propertyNames:
+        LPneumaticSystem1_cond: PneumaticSystem1_cond
+    LYI1:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - LYI1actm
+      - LYI1actw
+      - LYS1load
+      propertyNames:
+        LYS1load: YS1load
+        LYI1actm: YI1actm
+        LYI1actw: YI1actw
+    c1_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    x_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    enclosure:
+      objectTypeName: Enclosure
+      excluded: false
+      includedDataItems:
+      - insidetemp
+      propertyNames:
+        insidetemp: cabinettemp
+    Lc2:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - LS2speed
+      - LS2cmd
+      - LS2ovr
+      - LS2Mode
+      - LS2ChuckState
+      - LS2SurfaceSpeedA
+      propertyNames:
+        LS2ChuckState: S2ChuckState
+        LS2SurfaceSpeedA: S2SurfaceSpeedA
+        LS2cmd: S2cmd
+        LS2ovr: S2ovr
+        LS2speed: S2speed
+        LS2Mode: S2Mode
+    Lc1:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - LS1speed
+      - LS1cmd
+      - LS1ovr
+      - LS1load
+      - LS1Mode
+      - LS1ChuckState
+      - LS1SurfaceSpeedA
+      propertyNames:
+        LS1ChuckState: S1ChuckState
+        LS1SurfaceSpeedA: S1SurfaceSpeedA
+        LS1ovr: S1ovr
+        LS1speed: S1speed
+        LS1cmd: S1cmd
+        LS1load: S1load
+        LS1Mode: S1Mode
+    y_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    personnel:
+      objectTypeName: Personnel
+      excluded: false
+      includedDataItems:
+      - MachineOperator
+      - MachineMaintenance
+      - MachineSetup
+      propertyNames:
+        MachineSetup: MachineSetup
+        MachineOperator: MachineOperator
+        MachineMaintenance: MachineMaintenance
+    Lx1:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - LX1actm
+      - LX1actw
+      - LX1load
+      propertyNames:
+        LX1actm: X1actm
+        LX1actw: X1actw
+        LX1load: X1load
+    LToolingDeliverySystem1:
+      objectTypeName: ToolingDelivery
+      excluded: false
+      includedDataItems:
+      - LToolingDeliverySystem1_cond
+      propertyNames:
+        LToolingDeliverySystem1_cond: ToolingDeliverySystem1_cond
+    Lct1:
+      objectTypeName: Controller
+      excluded: false
+      includedDataItems:
+      - Lestop
+      - Lsystem
+      - Lpmode
+      - Lpprogram
+      - Lpexecution
+      - LpFovr
+      - Lppartcount
+      - Lp1ETWorking
+      - Lp1ETOperating
+      - Lp1ETLoaded
+      - LpTotalOperatingTime
+      - LpTotalRunningTime
+      - LpTotalCuttingTime
+      - LpTotalSpindleRunTime
+      - LpOperatingTime
+      - LpRunningTime
+      - LpCuttingTime
+      - LpSpindleRunTime
+      - Lp1CommonVariable
+      - Lp1MacManPanelHistory
+      - Lp1MachineOperationPanelOutputDryRun
+      - Lp1MachineOperationPanelOutputMachineLock
+      - LPlcMonitorIO_1
+      - LPlcMonitorIO_2
+      - LPlcMonitorIO_3
+      - LPlcMonitorIO_4
+      - LPlcMonitorIO_5
+      - LPlcMonitorIO_6
+      - LPlcMonitorIO_7
+      - LPlcMonitorIO_8
+      - LPlcMonitorIO_9
+      - LPlcMonitorIO_10
+      - Lp1ProgramHeader
+      - Lp1PalletID
+      - Lp1CMOMachineAxisLock
+      - Lp1CMOSinglBlock
+      - Lp1CMODryRun
+      - Lp1CMOOptionalStop
+      - Lp1FixtureId
+      propertyNames:
+        LPlcMonitorIO_4: PlcMonitorIO_4
+        LPlcMonitorIO_7: PlcMonitorIO_7
+        LpTotalSpindleRunTime: pTotalSpindleRunTime
+        LPlcMonitorIO_3: PlcMonitorIO_3
+        Lp1MacManPanelHistory: p1MacManPanelHistory
+        Lsystem: system
+        LpTotalCuttingTime: pTotalCuttingTime
+        Lestop: estop
+        LPlcMonitorIO_5: PlcMonitorIO_5
+        Lppartcount: ppartcount
+        Lpmode: pmode
+        LpTotalOperatingTime: pTotalOperatingTime
+        LpCuttingTime: pCuttingTime
+        LpSpindleRunTime: pSpindleRunTime
+        LPlcMonitorIO_9: PlcMonitorIO_9
+        Lp1ProgramHeader: p1ProgramHeader
+        Lp1CMOMachineAxisLock: p1CMOMachineAxisLock
+        Lp1ETLoaded: p1ETLoaded
+        LPlcMonitorIO_2: PlcMonitorIO_2
+        LPlcMonitorIO_8: PlcMonitorIO_8
+        LPlcMonitorIO_1: PlcMonitorIO_1
+        LpTotalRunningTime: pTotalRunningTime
+        LpOperatingTime: pOperatingTime
+        LpRunningTime: pRunningTime
+        Lp1ETOperating: p1ETOperating
+        Lp1CMOSinglBlock: p1CMOSinglBlock
+        Lp1CMODryRun: p1CMODryRun
+        Lp1FixtureId: p1FixtureId
+        Lp1ETWorking: p1ETWorking
+        Lpprogram: pprogram
+        Lp1PalletID: p1PalletID
+        LPlcMonitorIO_6: PlcMonitorIO_6
+        Lpexecution: pexecution
+        Lp1MachineOperationPanelOutputDryRun: p1MachineOperationPanelOutputDryRun
+        Lp1CMOOptionalStop: p1CMOOptionalStop
+        Lp1MachineOperationPanelOutputMachineLock: p1MachineOperationPanelOutputMachineLock
+        LpFovr: pFovr
+        Lp1CommonVariable: p1CommonVariable
+        LPlcMonitorIO_10: PlcMonitorIO_10
+    b_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    LLubricationSystem1:
+      objectTypeName: Lubrication
+      excluded: false
+      includedDataItems:
+      - LLubricationSystem_cond
+      propertyNames:
+        LLubricationSystem_cond: LubricationSystem1_cond
+    LSystems1:
+      objectTypeName: Systems
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    Lc3:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - LC3actm
+      - LC3actw
+      - LC3load
+      - LC3Mode
+      propertyNames:
+        LC3actw: C3actw
+        LC3load: C3load
+        LC3actm: C3actm
+        LC3Mode: C3Mode
+    c2_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    resources:
+      objectTypeName: Resources
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    Laxes1:
+      objectTypeName: Axes
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    LAux1:
+      objectTypeName: Auxiliaries
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    LWasteDisposalSystem1:
+      objectTypeName: WasteDisposal
+      excluded: false
+      includedDataItems:
+      - LWasteDisposalSystem1_cond
+      propertyNames:
+        LWasteDisposalSystem1_cond: WasteDisposalSystem1_cond
+    LElectricSystem1:
+      objectTypeName: Electric
+      excluded: false
+      includedDataItems:
+      - LElectricSystem1_cond
+      propertyNames:
+        LElectricSystem1_cond: ElectricSystem1_cond
+    Lz4:
+      objectTypeName: LinearAxis
+      excluded: false
+      includedDataItems:
+      - LZ4actm
+      - LZ4actw
+      - LZ4load
+      propertyNames:
+        LZ4actw: Z4actw
+        LZ4actm: Z4actm
+        LZ4load: Z4load
+    Lp1:
+      objectTypeName: Path
+      excluded: false
+      includedDataItems:
+      - Lp1Fact
+      - Lp1block
+      - Lp1linelabel
+      - Lp1linenumber
+      - Lp1Fcmd
+      - Lp1LPathPos
+      - Lp1CurrentTool
+      - Lp1ToolAssetId
+      - Lp1BlockNumber
+      - Lp1Fract
+      - Lp1Frcmd
+      - LS1CuttingSpeedA
+      propertyNames:
+        Lp1linenumber: p1linenumber
+        Lp1Fact: p1Fact
+        Lp1LPathPos: p1LPathPos
+        Lp1Frcmd: p1Frcmd
+        Lp1ToolAssetId: p1ToolAssetId
+        Lp1BlockNumber: p1BlockNumber
+        Lp1block: p1block
+        Lp1linelabel: p1linelabel
+        Lp1CurrentTool: p1CurrentTool
+        Lp1Fract: p1Fract
+        LS1CuttingSpeedA: S1CuttingSpeedA
+        Lp1Fcmd: p1Fcmd
+    LLoaderSystem1:
+      objectTypeName: Loader
+      excluded: false
+      includedDataItems:
+      - LLoaderSystem1_cond
+      propertyNames:
+        LLoaderSystem1_cond: LoaderSystem1_cond
+    Lc6:
+      objectTypeName: RotaryAxis
+      excluded: false
+      includedDataItems:
+      - LS6speed
+      - LS6cmd
+      - LS6ovr
+      - LS6load
+      - LS6Mode
+      propertyNames:
+        LS6load: S6load
+        LS6Mode: S6Mode
+        LS6cmd: S6cmd
+        LS6speed: S6speed
+        LS6ovr: S6ovr
+    LCoolantSystem1:
+      objectTypeName: Coolant
+      excluded: false
+      includedDataItems:
+      - LCoolantSystem1_cond
+      propertyNames:
+        LCoolantSystem1_cond: CoolantSystem1_cond
+    z1_axis:
+      objectTypeName: Structure
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+    LBarFeederSystem1:
+      objectTypeName: BarFeeder
+      excluded: false
+      includedDataItems:
+      - LBarFeederSystem1_cond
+      propertyNames:
+        LBarFeederSystem1_cond: BarFeederSystem1_cond
+    struct:
+      objectTypeName: Structures
+      excluded: false
+      includedDataItems: []
+      propertyNames: {}
+  relationships:
+  - sourceComponentId: Lx1
+    targetComponentId: Lz1
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: LYI1
+    targetComponentId: Lx1
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: Lb1
+    targetComponentId: LYI1
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: Lc2
+    targetComponentId: Lz4
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: Lc3
+    targetComponentId: Lz4
+    typeName: MountedOn
+    inverseTypeName: Supports
+  - sourceComponentId: Lc3
+    targetComponentId: Lc2
+    typeName: MountedOn
+    inverseTypeName: Supports
+deviceModel:
+  deviceId: OKUMA.123456
+  deviceName: OKUMA
+  manufacturer: OKUMA
+  model: MULT_U3000
+  serialNumber: '123456'
+  components:
+  - id: struct
+    name: Structures
+    componentType: Structures
+    parentId: OKUMA.123456
+    nativeName: null
+  - id: x_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: y_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: z1_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: z4_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: b_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: c1_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: c2_axis
+    name: Structure
+    componentType: Structure
+    parentId: struct
+    nativeName: null
+  - id: Laxes1
+    name: Axes
+    componentType: Axes
+    parentId: OKUMA.123456
+    nativeName: null
+  - id: Lx1
+    name: X
+    componentType: Linear
+    parentId: Laxes1
+    nativeName: null
+  - id: LYI1
+    name: Y
+    componentType: Linear
+    parentId: Laxes1
+    nativeName: Y
+  - id: Lz1
+    name: Z1
+    componentType: Linear
+    parentId: Laxes1
+    nativeName: null
+  - id: Lb1
+    name: B
+    componentType: Rotary
+    parentId: Laxes1
+    nativeName: BA
+  - id: Lc1
+    name: C1
+    componentType: Rotary
+    parentId: Laxes1
+    nativeName: S
+  - id: Lz4
+    name: Z4
+    componentType: Linear
+    parentId: Laxes1
+    nativeName: WA
+  - id: Lc2
+    name: C2
+    componentType: Rotary
+    parentId: Laxes1
+    nativeName: S
+  - id: Lc3
+    name: C3
+    componentType: Rotary
+    parentId: Laxes1
+    nativeName: CA
+  - id: Lc6
+    name: C6
+    componentType: Rotary
+    parentId: Laxes1
+    nativeName: SA
+  - id: Lct1
+    name: Controller
+    componentType: Controller
+    parentId: OKUMA.123456
+    nativeName: null
+  - id: Lp1
+    name: path
+    componentType: Path
+    parentId: Lct1
+    nativeName: null
+  - id: LSystems1
+    name: Systems1
+    componentType: Systems
+    parentId: OKUMA.123456
+    nativeName: null
+  - id: LCoolantSystem1
+    name: CoolantSystem1
+    componentType: Coolant
+    parentId: LSystems1
+    nativeName: null
+  - id: LElectricSystem1
+    name: ElectricSystem1
+    componentType: Electric
+    parentId: LSystems1
+    nativeName: null
+  - id: LHydraulicSystem1
+    name: HydraulicSystem1
+    componentType: Hydraulic
+    parentId: LSystems1
+    nativeName: null
+  - id: LLubricationSystem1
+    name: LubricationSystem1
+    componentType: Lubrication
+    parentId: LSystems1
+    nativeName: null
+  - id: LPneumaticSystem1
+    name: PneumaticSystem1
+    componentType: Pneumatic
+    parentId: LSystems1
+    nativeName: null
+  - id: LAux1
+    name: Auxiliaries
+    componentType: Auxiliaries
+    parentId: OKUMA.123456
+    nativeName: null
+  - id: LLoaderSystem1
+    name: LoaderSystem1
+    componentType: Loader
+    parentId: LAux1
+    nativeName: null
+  - id: LWasteDisposalSystem1
+    name: WasteDisposalSystem1
+    componentType: WasteDisposal
+    parentId: LAux1
+    nativeName: null
+  - id: LToolingDeliverySystem1
+    name: ToolingDeliverySystem1
+    componentType: ToolingDelivery
+    parentId: LAux1
+    nativeName: null
+  - id: LBarFeederSystem1
+    name: BarFeederSystem1
+    componentType: BarFeeder
+    parentId: LAux1
+    nativeName: null
+  - id: resources
+    name: resources
+    componentType: Resources
+    parentId: OKUMA.123456
+    nativeName: null
+  - id: personnel
+    name: personnel
+    componentType: Personnel
+    parentId: resources
+    nativeName: null
+  - id: enclosure
+    name: enclosure
+    componentType: Enclosure
+    parentId: OKUMA.123456
+    nativeName: null
+  dataItems:
+  - id: Lavail
+    name: avail
+    category: EVENT
+    type: AVAILABILITY
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: Lfmode
+    name: fmode
+    category: EVENT
+    type: FUNCTIONAL_MODE
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: OS
+    name: OperatingSystem
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: OSMan
+    name: OperatingSystemManufacture
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: MANUFACTURER
+    units: null
+    componentId: OKUMA.123456
+  - id: OSVer
+    name: OperatingSystemVersion
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: VERSION
+    units: null
+    componentId: OKUMA.123456
+  - id: OSAll
+    name: OperatingSystemAll
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: ALL
+    units: null
+    componentId: OKUMA.123456
+  - id: OSInst
+    name: OperatingSystemInstallDate
+    category: EVENT
+    type: OPERATING_SYSTEM
+    subType: INSTALL_DATE
+    units: null
+    componentId: OKUMA.123456
+  - id: App
+    name: Application
+    category: EVENT
+    type: APPLICATION
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: AppMan
+    name: ApplicationManufacture
+    category: EVENT
+    type: APPLICATION
+    subType: MANUFACTURER
+    units: null
+    componentId: OKUMA.123456
+  - id: AppVer
+    name: ApplicationVersion
+    category: EVENT
+    type: APPLICATION
+    subType: VERSION
+    units: null
+    componentId: OKUMA.123456
+  - id: AppRel
+    name: ApplicationReleaseDate
+    category: EVENT
+    type: APPLICATION
+    subType: RELEASE_DATE
+    units: null
+    componentId: OKUMA.123456
+  - id: AppAll
+    name: ApplicationAll
+    category: EVENT
+    type: APPLICATION
+    subType: ALL
+    units: null
+    componentId: OKUMA.123456
+  - id: OKUMA.123456_asset_chg
+    name: OKUMA.123456_asset_chg
+    category: EVENT
+    type: ASSET_CHANGED
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: OKUMA.123456_asset_rem
+    name: OKUMA.123456_asset_rem
+    category: EVENT
+    type: ASSET_REMOVED
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: OKUMA.123456_asset_count
+    name: OKUMA.123456_asset_count
+    category: EVENT
+    type: ASSET_COUNT
+    subType: null
+    units: null
+    componentId: OKUMA.123456
+  - id: LX1actm
+    name: X1actm
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: Lx1
+  - id: LX1actw
+    name: X1actw
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: Lx1
+  - id: LX1load
+    name: X1load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lx1
+  - id: LYI1actm
+    name: YI1actm
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: LYI1
+  - id: LYI1actw
+    name: YI1actw
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: LYI1
+  - id: LYS1load
+    name: YS1load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: LYI1
+  - id: LZ1actm
+    name: Z1actm
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: Lz1
+  - id: LZ1actw
+    name: Z1actw
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: Lz1
+  - id: LZ1load
+    name: Z1load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lz1
+  - id: LB1actw
+    name: B1actw
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: Lb1
+  - id: LB1load
+    name: B1load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lb1
+  - id: LB1Mode
+    name: B1Mode
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: Lb1
+  - id: LS1speed
+    name: S1speed
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: ACTUAL
+    units: REVOLUTION/MINUTE
+    componentId: Lc1
+  - id: LS1cmd
+    name: S1cmd
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: PROGRAMMED
+    units: REVOLUTION/MINUTE
+    componentId: Lc1
+  - id: LS1ovr
+    name: S1ovr
+    category: EVENT
+    type: ROTARY_VELOCITY_OVERRIDE
+    subType: PROGRAMMED
+    units: PERCENT
+    componentId: Lc1
+  - id: LS1load
+    name: S1load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lc1
+  - id: LS1Mode
+    name: S1Mode
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: Lc1
+  - id: LS1ChuckState
+    name: S1ChuckState
+    category: EVENT
+    type: CHUCK_STATE
+    subType: null
+    units: null
+    componentId: Lc1
+  - id: LS1SurfaceSpeedA
+    name: S1SurfaceSpeedA
+    category: SAMPLE
+    type: e:SURFACE_SPEED
+    subType: x:PATH_1
+    units: MILLIMETER/SECOND
+    componentId: Lc1
+  - id: LZ4actm
+    name: Z4actm
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: Lz4
+  - id: LZ4actw
+    name: Z4actw
+    category: SAMPLE
+    type: POSITION
+    subType: ACTUAL
+    units: MILLIMETER
+    componentId: Lz4
+  - id: LZ4load
+    name: Z4load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lz4
+  - id: LS2speed
+    name: S2speed
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: ACTUAL
+    units: REVOLUTION/MINUTE
+    componentId: Lc2
+  - id: LS2cmd
+    name: S2cmd
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: PROGRAMMED
+    units: REVOLUTION/MINUTE
+    componentId: Lc2
+  - id: LS2ovr
+    name: S2ovr
+    category: EVENT
+    type: ROTARY_VELOCITY_OVERRIDE
+    subType: PROGRAMMED
+    units: PERCENT
+    componentId: Lc2
+  - id: LS2Mode
+    name: S2Mode
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: Lc2
+  - id: LS2ChuckState
+    name: S2ChuckState
+    category: EVENT
+    type: CHUCK_STATE
+    subType: null
+    units: null
+    componentId: Lc2
+  - id: LS2SurfaceSpeedA
+    name: S2SurfaceSpeedA
+    category: SAMPLE
+    type: e:SURFACE_SPEED
+    subType: x:PATH_1
+    units: MILLIMETER/SECOND
+    componentId: Lc2
+  - id: LC3actm
+    name: C3actm
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: Lc3
+  - id: LC3actw
+    name: C3actw
+    category: SAMPLE
+    type: ANGLE
+    subType: ACTUAL
+    units: DEGREE
+    componentId: Lc3
+  - id: LC3load
+    name: C3load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lc3
+  - id: LC3Mode
+    name: C3Mode
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: Lc3
+  - id: LS6speed
+    name: S6speed
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: ACTUAL
+    units: REVOLUTION/MINUTE
+    componentId: Lc6
+  - id: LS6cmd
+    name: S6cmd
+    category: SAMPLE
+    type: ROTARY_VELOCITY
+    subType: PROGRAMMED
+    units: REVOLUTION/MINUTE
+    componentId: Lc6
+  - id: LS6ovr
+    name: S6ovr
+    category: EVENT
+    type: ROTARY_VELOCITY_OVERRIDE
+    subType: PROGRAMMED
+    units: PERCENT
+    componentId: Lc6
+  - id: LS6load
+    name: S6load
+    category: SAMPLE
+    type: LOAD
+    subType: null
+    units: PERCENT
+    componentId: Lc6
+  - id: LS6Mode
+    name: S6Mode
+    category: EVENT
+    type: ROTARY_MODE
+    subType: null
+    units: null
+    componentId: Lc6
+  - id: Lestop
+    name: estop
+    category: EVENT
+    type: EMERGENCY_STOP
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lsystem
+    name: system
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lpmode
+    name: pmode
+    category: EVENT
+    type: CONTROLLER_MODE
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lpprogram
+    name: pprogram
+    category: EVENT
+    type: PROGRAM
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lpexecution
+    name: pexecution
+    category: EVENT
+    type: EXECUTION
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: LpFovr
+    name: pFovr
+    category: EVENT
+    type: PATH_FEEDRATE_OVERRIDE
+    subType: PROGRAMMED
+    units: PERCENT
+    componentId: Lct1
+  - id: Lppartcount
+    name: ppartcount
+    category: EVENT
+    type: PART_COUNT
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lp1ETWorking
+    name: p1ETWorking
+    category: SAMPLE
+    type: EQUIPMENT_TIMER
+    subType: WORKING
+    units: SECOND
+    componentId: Lct1
+  - id: Lp1ETOperating
+    name: p1ETOperating
+    category: SAMPLE
+    type: EQUIPMENT_TIMER
+    subType: OPERATING
+    units: SECOND
+    componentId: Lct1
+  - id: Lp1ETLoaded
+    name: p1ETLoaded
+    category: SAMPLE
+    type: EQUIPMENT_TIMER
+    subType: LOADED
+    units: SECOND
+    componentId: Lct1
+  - id: LpTotalOperatingTime
+    name: pTotalOperatingTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:TOTAL_OPERATING_TIME
+    units: null
+    componentId: Lct1
+  - id: LpTotalRunningTime
+    name: pTotalRunningTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:TOTAL_RUNNING_TIME
+    units: null
+    componentId: Lct1
+  - id: LpTotalCuttingTime
+    name: pTotalCuttingTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:TOTAL_CUTTING_TIME
+    units: null
+    componentId: Lct1
+  - id: LpTotalSpindleRunTime
+    name: pTotalSpindleRunTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:TOTAL_SPINDLE_RUN_TIME
+    units: null
+    componentId: Lct1
+  - id: LpOperatingTime
+    name: pOperatingTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:OPERATING_TIME
+    units: null
+    componentId: Lct1
+  - id: LpRunningTime
+    name: pRunningTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:RUNNING_TIME
+    units: null
+    componentId: Lct1
+  - id: LpCuttingTime
+    name: pCuttingTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:CUTTING_TIME
+    units: null
+    componentId: Lct1
+  - id: LpSpindleRunTime
+    name: pSpindleRunTime
+    category: SAMPLE
+    type: ACCUMULATED_TIME
+    subType: x:SPINDLE_RUN_TIME
+    units: null
+    componentId: Lct1
+  - id: Lp1CommonVariable
+    name: p1CommonVariable
+    category: EVENT
+    type: e:VARIABLES
+    subType: x:COMMON
+    units: null
+    componentId: Lct1
+  - id: Lp1MacManPanelHistory
+    name: p1MacManPanelHistory
+    category: EVENT
+    type: e:MACMAN
+    subType: x:PANEL_HISTORY
+    units: null
+    componentId: Lct1
+  - id: Lp1MachineOperationPanelOutputDryRun
+    name: p1MachineOperationPanelOutputDryRun
+    category: EVENT
+    type: e:OUTPUT_SIGNAL
+    subType: x:DRY_RUN
+    units: null
+    componentId: Lct1
+  - id: Lp1MachineOperationPanelOutputMachineLock
+    name: p1MachineOperationPanelOutputMachineLock
+    category: EVENT
+    type: e:OUTPUT_SIGNAL
+    subType: x:MACHINE_LOCK
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_1
+    name: PlcMonitorIO_1
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_1
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_2
+    name: PlcMonitorIO_2
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_2
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_3
+    name: PlcMonitorIO_3
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_3
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_4
+    name: PlcMonitorIO_4
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_4
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_5
+    name: PlcMonitorIO_5
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_5
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_6
+    name: PlcMonitorIO_6
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_6
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_7
+    name: PlcMonitorIO_7
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_7
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_8
+    name: PlcMonitorIO_8
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_8
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_9
+    name: PlcMonitorIO_9
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_9
+    units: null
+    componentId: Lct1
+  - id: LPlcMonitorIO_10
+    name: PlcMonitorIO_10
+    category: EVENT
+    type: e:INPUT_OUTPUT_SIGNAL
+    subType: x:PLC_MONITOR_IO_10
+    units: null
+    componentId: Lct1
+  - id: Lp1ProgramHeader
+    name: p1ProgramHeader
+    category: EVENT
+    type: PROGRAM_HEADER
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lp1PalletID
+    name: p1PalletID
+    category: EVENT
+    type: PALLET_ID
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lp1CMOMachineAxisLock
+    name: p1CMOMachineAxisLock
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: MACHINE_AXIS_LOCK
+    units: null
+    componentId: Lct1
+  - id: Lp1CMOSinglBlock
+    name: p1CMOSinglBlock
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: SINGLE_BLOCK
+    units: null
+    componentId: Lct1
+  - id: Lp1CMODryRun
+    name: p1CMODryRun
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: DRY_RUN
+    units: null
+    componentId: Lct1
+  - id: Lp1CMOOptionalStop
+    name: p1CMOOptionalStop
+    category: EVENT
+    type: CONTROLLER_MODE_OVERRIDE
+    subType: OPTIONAL_STOP
+    units: null
+    componentId: Lct1
+  - id: Lp1FixtureId
+    name: p1FixtureId
+    category: EVENT
+    type: FIXTURE_ID
+    subType: null
+    units: null
+    componentId: Lct1
+  - id: Lp1Fact
+    name: p1Fact
+    category: SAMPLE
+    type: PATH_FEEDRATE
+    subType: ACTUAL
+    units: MILLIMETER/SECOND
+    componentId: Lp1
+  - id: Lp1block
+    name: p1block
+    category: EVENT
+    type: BLOCK
+    subType: null
+    units: null
+    componentId: Lp1
+  - id: Lp1linelabel
+    name: p1linelabel
+    category: EVENT
+    type: LINE_LABEL
+    subType: null
+    units: null
+    componentId: Lp1
+  - id: Lp1linenumber
+    name: p1linenumber
+    category: EVENT
+    type: LINE_NUMBER
+    subType: ABSOLUTE
+    units: null
+    componentId: Lp1
+  - id: Lp1Fcmd
+    name: p1Fcmd
+    category: SAMPLE
+    type: PATH_FEEDRATE
+    subType: PROGRAMMED
+    units: MILLIMETER/SECOND
+    componentId: Lp1
+  - id: Lp1LPathPos
+    name: p1LPathPos
+    category: SAMPLE
+    type: PATH_POSITION
+    subType: ACTUAL
+    units: MILLIMETER_3D
+    componentId: Lp1
+  - id: Lp1CurrentTool
+    name: p1CurrentTool
+    category: EVENT
+    type: TOOL_NUMBER
+    subType: null
+    units: null
+    componentId: Lp1
+  - id: Lp1ToolAssetId
+    name: p1ToolAssetId
+    category: EVENT
+    type: TOOL_ASSET_ID
+    subType: null
+    units: null
+    componentId: Lp1
+  - id: Lp1BlockNumber
+    name: p1BlockNumber
+    category: EVENT
+    type: e:BLOCK_NUMBER
+    subType: null
+    units: null
+    componentId: Lp1
+  - id: Lp1Fract
+    name: p1Fract
+    category: SAMPLE
+    type: e:PATH_FEEDRATE_PER_REV
+    subType: ACTUAL
+    units: null
+    componentId: Lp1
+  - id: Lp1Frcmd
+    name: p1Frcmd
+    category: SAMPLE
+    type: e:PATH_FEEDRATE_PER_REV
+    subType: PROGRAMMED
+    units: null
+    componentId: Lp1
+  - id: LS1CuttingSpeedA
+    name: S1CuttingSpeedA
+    category: SAMPLE
+    type: CUTTING_SPEED
+    subType: ACTUAL
+    units: MILLIMETER/SECOND
+    componentId: Lp1
+  - id: LCoolantSystem1_cond
+    name: CoolantSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LCoolantSystem1
+  - id: LElectricSystem1_cond
+    name: ElectricSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LElectricSystem1
+  - id: LHydraulicSystem1_cond
+    name: HydraulicSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LHydraulicSystem1
+  - id: LLubricationSystem_cond
+    name: LubricationSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LLubricationSystem1
+  - id: LPneumaticSystem1_cond
+    name: PneumaticSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LPneumaticSystem1
+  - id: LLoaderSystem1_cond
+    name: LoaderSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LLoaderSystem1
+  - id: LWasteDisposalSystem1_cond
+    name: WasteDisposalSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LWasteDisposalSystem1
+  - id: LToolingDeliverySystem1_cond
+    name: ToolingDeliverySystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LToolingDeliverySystem1
+  - id: LBarFeederSystem1_cond
+    name: BarFeederSystem1_cond
+    category: CONDITION
+    type: SYSTEM
+    subType: null
+    units: null
+    componentId: LBarFeederSystem1
+  - id: MachineOperator
+    name: MachineOperator
+    category: EVENT
+    type: USER
+    subType: OPERATOR
+    units: null
+    componentId: personnel
+  - id: MachineMaintenance
+    name: MachineMaintenance
+    category: EVENT
+    type: USER
+    subType: MAINTENANCE
+    units: null
+    componentId: personnel
+  - id: MachineSetup
+    name: MachineSetup
+    category: EVENT
+    type: USER
+    subType: SET_UP
+    units: null
+    componentId: personnel
+  - id: insidetemp
+    name: cabinettemp
+    category: SAMPLE
+    type: TEMPERATURE
+    subType: null
+    units: CELSIUS
+    componentId: enclosure
+  relationships:
+  - id: x1ParentRel
+    componentId: Lx1
+    refId: z1_axis
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: x1ChildRel
+    componentId: Lx1
+    refId: x_axis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: yi1ParentRel
+    componentId: LYI1
+    refId: x_axis
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: yi1ChildRel
+    componentId: LYI1
+    refId: y_axis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: z1ParentRel
+    componentId: Lz1
+    refId: enclosure
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: z1ChildRel
+    componentId: Lz1
+    refId: z1_axis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: lb1axp
+    componentId: Lb1
+    refId: y_axis
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: lb1axc
+    componentId: Lb1
+    refId: b_axis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: lc1axp
+    componentId: Lc1
+    refId: enclosure
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: z4ParentRel
+    componentId: Lz4
+    refId: enclosure
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: z4ChildRel
+    componentId: Lz4
+    refId: z4_axis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: c2ParentRel
+    componentId: Lc2
+    refId: z4_axis
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: c2ChildRel
+    componentId: Lc2
+    refId: c2_axis
+    type: CHILD
+    relKind: ComponentRelationship
+  - id: c2parent
+    componentId: Lc3
+    refId: z4_axis
+    type: PARENT
+    relKind: ComponentRelationship
+  - id: c2child
+    componentId: Lc3
+    refId: c2_axis
+    type: PARENT
+    relKind: ComponentRelationship
+  specifications:
+    Lz1:
+    - id: z1LengthSpec
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 650.0
+      minimum: null
+      maximum: null
+    - id: z1LinearForceSpec
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 5200.0
+    - id: z1RapidVelSpec
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: z1ProgrammedVelSpec
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    Lx1:
+    - id: x1LengthSpec
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 650.0
+      minimum: null
+      maximum: null
+    - id: x1LinearForceSpec
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 5200.0
+    - id: x1RapidVelSpec
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: x1ProgrammedVelSpec
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    Lz4:
+    - id: z4LengthSpec
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 650.0
+      minimum: null
+      maximum: null
+    - id: z4LinearForceSpec
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 5200.0
+    - id: z4RapidVelSpec
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: z4ProgrammedVelSpec
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    LYI1:
+    - id: yi1LengthSpec
+      type: LENGTH
+      subType: null
+      units: MILLIMETER
+      nominal: 650.0
+      minimum: null
+      maximum: null
+    - id: yi1LinearForceSpec
+      type: LINEAR_FORCE
+      subType: null
+      units: NEWTON
+      nominal: null
+      minimum: 0.0
+      maximum: 5200.0
+    - id: yi1RapidVelSpec
+      type: VELOCITY
+      subType: RAPID
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+    - id: yi1ProgrammedVelSpec
+      type: VELOCITY
+      subType: PROGRAMMED
+      units: MILLIMETER/SECOND
+      nominal: null
+      minimum: 1.0
+      maximum: 7000.0
+  references: []
+  sources: []
