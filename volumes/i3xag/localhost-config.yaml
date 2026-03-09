@@ -1,0 +1,17 @@
+port: 9000
+upstreams:
+  - name: "erp"
+    url: "http://localhost:8080"
+  - name: "okuma"
+    url: "http://localhost:8081"
+  - name: "mazak"
+    url: "http://localhost:8082"
+
+reparent:
+  # Nest Okuma lathe device under the ERP equipment record
+  - elementId: "OKUMA.123456"
+    parentId: "Equipment:CL-01"
+
+  # Nest Mazak 5-axis device under the ERP equipment record
+  - elementId: "Mazak"
+    parentId: "Equipment:5AX-01"
