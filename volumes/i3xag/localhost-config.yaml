@@ -13,5 +13,5 @@ reparent:
     parentId: "Equipment:CL-01"
 
   # Nest Mazak 5-axis device under the ERP equipment record
-  - elementId: "Mazak"
+  - elementId: "d1"
     parentId: "Equipment:5AX-01"
