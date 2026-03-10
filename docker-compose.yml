@@ -9,9 +9,7 @@ services:
       - ./volumes/i3xdb/config.yaml:/etc/i3xdb/config.yaml:ro
       - ./volumes/i3xdb/precision_cnc.db:/etc/i3xdb/db/precision_cnc.db:ro
     command: >
-      --config /etc/i3xdb/config.yaml
       --connection sqlite:///etc/i3xdb/db/precision_cnc.db
-      --port 8080
     ports:
       - "${I3XDB_PORT:-8080}:8080"
     networks:
